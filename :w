@@ -20,7 +20,7 @@ export default {
     }
   },
   methods: {
-    submitIdea (idea) {
+    submitIdea (idea) => {
       console.log('yo')
     }
   }
