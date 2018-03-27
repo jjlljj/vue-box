@@ -14,6 +14,13 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+article {
+  background: #f2f2f2;
+  width: 300px;
+  height: auto;
+  margin: 20px auto;
+  padding: 20px;
+}
 
 </style>
