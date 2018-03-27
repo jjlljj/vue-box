@@ -4,17 +4,20 @@
       <IdeaForm v-bind:submitIdea="submitIdea"/>
     </section>
     <section class="cards-section">
+      <IdeaCards v-if="ideas" v-bind:ideas="ideas" />
     </section>
   </div>
 </template>
 
 <script>
 import IdeaForm from './components/IdeaForm.vue'
+import IdeaCards from './components/IdeaCards.vue'
 
 export default {
   name: 'app',
   components: {
-    IdeaForm
+    IdeaForm,
+    IdeaCards
   },
   data () {
     return {
@@ -23,8 +26,8 @@ export default {
   },
   methods: {
     submitIdea (idea) {
-      console.log('yo')
       console.log(idea)
+      this.ideas.push(idea)
     }
   }
 }
