@@ -1,8 +1,7 @@
 <template>
   <div id="app">
     <img src="./assets/logo.png">
-    <!--<HelloWorld msg="Welcome to Your Vue.js App"/>-->
-    <IdeaForm v-bind:submitIdea="{submitIdea}"/>
+    <IdeaForm v-bind:submitIdea="submitIdea"/>
   </div>
 </template>
 
@@ -22,6 +21,7 @@ export default {
   methods: {
     submitIdea (idea) {
       console.log('yo')
+      console.log(idea)
     }
   }
 }
