@@ -26,7 +26,6 @@ export default {
   },
   methods: {
     submitIdea (idea) {
-      console.log(idea)
       this.ideas.push(idea)
     },
     deleteIdea (id) {
