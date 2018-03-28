@@ -32,8 +32,9 @@
     methods: {
       handleSubmit: function (event) {
         event.preventDefault()
+        const id = Date.now()
         const { ideaTitle, ideaBody } = this
-        this.submitIdea({ ideaTitle, ideaBody })
+        this.submitIdea({ ideaTitle, ideaBody, id })
       }
     }
   }

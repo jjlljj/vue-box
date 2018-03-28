@@ -4,7 +4,7 @@
       <IdeaForm v-bind:submitIdea="submitIdea"/>
     </section>
     <section class="cards-section">
-      <IdeaCards v-if="ideas" v-bind:ideas="ideas" />
+      <IdeaCards v-if="ideas" v-bind:ideas="ideas" v-bind:deleteIdea="deleteIdea" />
     </section>
   </div>
 </template>
@@ -28,6 +28,9 @@ export default {
     submitIdea (idea) {
       console.log(idea)
       this.ideas.push(idea)
+    },
+    deleteIdea (id) {
+      this.ideas = this.ideas.filter(idea => idea.id !== id)
     }
   }
 }

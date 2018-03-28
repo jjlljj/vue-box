@@ -1,7 +1,7 @@
 <template>
   <div class="cards-container" >
     <div v-for="idea in ideas">  
-      <Card v-bind="{idea}"/>
+      <Card v-bind="{idea, deleteIdea}"/>
     </div>
   </div>
 </template>
@@ -15,7 +15,8 @@ export default {
     Card
   },
   props: {
-    ideas: Array
+    ideas: Array,
+    deleteIdea: Function
   }
 }
 </script>
